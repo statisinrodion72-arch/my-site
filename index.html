@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Гра: В кого більше число</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin-top: 50px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .player {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 120px;
+    }
+    .score {
+      font-size: 20px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    .number {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+    button {
+      background: limegreen;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Гра: В кого більше число</h1>
+  <h2 id="userName"></h2>
+
+  <div class="container">
+    <div class="player">
+      <div class="score" id="userScore">0</div>
+      <div>Користувач</div>
+      <div class="number" id="userNum">-</div>
+    </div>
+
+    <button id="generateBtn">dice</button>
+
+    <div class="player">
+      <div class="score" id="compScore">0</div>
+      <div>Комп’ютер</div>
+      <div class="number" id="compNum">-</div>
+    </div>
+  </div>
+
+  <!-- Підключаємо зовнішній JavaScript файл -->
+  <script src="game.js"></script>
+</body>
+</html>
